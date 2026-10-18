@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我的排班日历</title>
+<style>
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+background:#0f1115;color:#e8e8ea;margin:0;padding:32px 20px;line-height:1.7}
+.card{max-width:640px;margin:0 auto;background:#181b22;border-radius:14px;padding:28px}
+h1{font-size:20px;margin:0 0 6px}
+p.sub{color:#8b93a7;margin:0 0 24px;font-size:14px}
+code{display:block;background:#0c0e12;border:1px solid #2a2f3a;border-radius:9px;
+padding:14px;font-size:13px;word-break:break-all;color:#7cc4ff;margin:10px 0}
+button{background:#2f6fed;color:#fff;border:0;border-radius:9px;padding:11px 20px;
+font-size:14px;cursor:pointer}
+button:active{opacity:.7}
+ol{padding-left:20px} li{margin:8px 0}
+.hint{color:#8b93a7;font-size:13px;margin-top:22px;border-top:1px solid #262b35;padding-top:16px}
+</style></head><body><div class="card">
+<h1>我的排班日历</h1>
+<p class="sub">10/07 – 12/31 · 四天一循环：夜 → 白 → 中 → 休</p>
+<code id="u">https://foeget.github.io/shift-schedule/schedule.ics</code>
+<button onclick="navigator.clipboard.writeText('https://foeget.github.io/shift-schedule/schedule.ics').then(()=>this.textContent='已复制')">复制订阅地址</button>
+<ol>
+<li>iPhone：设置 → 日历 → 账户 → 添加账户 → 其他 → 添加已订阅的日历</li>
+<li>粘贴上面的网址，名称填「我的排班」</li>
+<li>保存后会定期自动刷新</li>
+</ol>
+<p class="hint">排班更新后，日历会在几小时内自动同步，无需重新导入。</p>
+</div></body></html>
